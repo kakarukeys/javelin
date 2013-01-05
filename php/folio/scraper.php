@@ -1,0 +1,31 @@
+<h2 class="content-heading">Web scraper visual setup tool</h2>
+<h3 class="small-heading">The problem</h3>
+<p>A client wants to extract structured data from a large number of forums and blogs. These websites do not provide RSS nor a data API, so they choose to use web scraping methods to collect the data on the websites. Mapping the structure of a website: specifying the XPath or CSS selector to all the information they want, is a tedious task. In order to scale up, they want to crowd-source the operation to data-entry clerks.</p>
+
+<p>However, a data-entry clerk does not have the programming knowledge to map the website structure like a developer does. He/she prefers a visual way to discover the mapping rules, something like what a commercial solution like <a href="http://www.visualwebripper.com/" target="_blank">Visual Web Ripper</a> provides. They find an off-the-shelf software difficult to integrate into their existing backend, moreover the licensing cost is high.</p>
+
+<h3 class="small-heading">The solution</h3>
+<p>To solve their problem, I designed and built a web application that enables a layman to perform the mapping easily using visual guides, simple helpers and straightforward data-entry interface. I put in a proper workflow for their data-entry clerks to follow.</p>
+
+<p align="center"><a href="images/folio/scraper-clip01b.jpg" target="_blank"><img src="images/folio/scraper-clip01m.jpg" alt="" /></a></p>
+
+<p>With the tool, their data-entry clerks are able to generate regular expressions to match the website URLs, discover and key-in XPath rules for scraping the information on the websites, handle special cases with clojure s-expression filters and regular expressions, preview the scraped results, save the rules to the database. Moreover, they are able to perform all the above without any programming knowledge or knowing how to write a regular expression</p>
+
+<p>The system is tightly integrated with their existing web crawler and information processing backend.</p>
+
+<p align="center"><a href="images/folio/scraper-clip02b.jpg" target="_blank"><img src="images/folio/scraper-clip02m.jpg" alt="" /></a></p>
+
+<h3 class="small-heading">A trick</h3>
+<p>The use of free and readily available web tools: Firefox, Firebug, Firepath plugin in the workflow eliminated the need to build a full-fledged GUI such as the one in Visual Web Ripper. This saves the client a considerable amount of money. During problem solving, one should reuse available resources and not build everything from scratch.</p>
+
+<h3 class="small-heading">The tool is powered by:</h3>
+<ul>
+  <li>AngularJS</li>
+  <li>jQuery</li>
+  <li>Clojure backend</li>
+  <li>Noir micro web framework</li>
+  <li>PostgreSQL</li>
+</ul>
+<p>This project was completed in 2 weeks within schedule. Customer support lasted for 1 month. </p>
+<p><em>A live demo and the javascript source code of this project are available for viewing. Client permission need to be sought first. Please contact me if you are interested to view.</em></p>
+

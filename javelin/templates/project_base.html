@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block page_title %}{% trans "javelin - medicine, natural remedies and information sharing for GERD" %}{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/project_base.css" />
+{% endblock %}
+
+{% block header %}
+    <div class="container">
+        <div class="row">
+            <div class="span2">
+                <img src="http://webdesignledger.com/wp-content/uploads/2009/10/logos_2.jpg" alt="Logo"/>
+            </div>
+            <div class="span9" id="logo">
+                <h1>javelin</h1>
+                <p>Personalize your treatment for chronic illness.</p>
+            </div>
+        </div>
+        
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="/gerd/">GERD</a>
+                    <div class="nav-collapse pull-right">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock header %}
+
+{% block footer %}
+    <div id="footer_band">
+        <div class="container">
+            <div class="row">
+                <div class="span1 offset5">
+                    <img src="http://www.alpunch.co.uk/FW/PHOTOS/TOOLS/embossed_logo_lge.jpg" alt="" />
+                </div>
+                <div class="span3">
+                    <h2>Contact</h2>
+                    <p>Email us at kakarukeys ~[at]~  gmail.com</p>
+                </div>
+            </div>
+            <div id="footer_last_message"><p>&copy; <em>javelin.com</em> All rights reserved.</p></div>
+        </div>
+    </div>
+{% endblock footer %}
+
