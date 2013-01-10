@@ -1,0 +1,17 @@
+{% extends "jumpbox.html" %}
+{% load i18n %}
+
+{% block page_content %}
+<div class="page" id="about">
+    <div class="about-logo"></div>
+    <div class="content" >
+        <div class="content-bg">
+        {% include "about_content.html" %}
+        </div>
+    </div>
+    <div class="bottom-content">
+    {% include "bottom_mods.html" %}
+    {% include "footer.html" %}
+    </div>
+</div>
+{% endblock %}
