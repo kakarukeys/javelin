@@ -11,6 +11,7 @@ from django.views.generic import TemplateView
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', TemplateView.as_view(template_name = "about.html"), name='about'),
+    url(r'^resume/$', TemplateView.as_view(template_name = "resume.html"), name='resume'),
     # url(r'^testing/', include('testing.foo.urls')),
     # url(r'^gerd/$', coming_soon.ComingSoon.as_view(), name="coming_soon"),
     
