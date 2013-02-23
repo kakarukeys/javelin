@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView
 
 class Jumpbox(TemplateView):
-    template_name = "jumpbox.html"
+    template_name = "jumpbox/jumpbox.html"
     first_page = None   #determine which page to show first
     
     def get_context_data(self, **kwargs):
