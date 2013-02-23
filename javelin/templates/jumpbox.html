@@ -9,37 +9,26 @@
 <div class="ajax-loader"></div>
 <ul id="menu">
 	<li class="menu-link">
-        <a href="index.php?page=about"><img src="{{ STATIC_URL }}img/menu/about.png" width="72" height="72" alt="About" />About Me</a>
+        <a href="{% url about %}"><img src="{{ STATIC_URL }}img/menu/about.png" width="72" height="72" alt="About" />About Me</a>
     </li>
     <li class="menu-link">
-        <a href="index.php?page=resume"><img src="{{ STATIC_URL }}img/menu/resume.png" width="80" height="81" alt="Resume" />Resume</a>
+        <a href="{% url resume %}"><img src="{{ STATIC_URL }}img/menu/resume.png" width="80" height="81" alt="Resume" />Resume</a>
     </li>
     <li class="menu-link">
-       <a href="index.php?page=portfolio"><img src="{{ STATIC_URL }}img/menu/portfolio.png" width="84" height="84" alt="Portfolio" />Portfolio</a>
+       <a href="{% url portfolio %}"><img src="{{ STATIC_URL }}img/menu/portfolio.png" width="84" height="84" alt="Portfolio" />Portfolio</a>
     </li>
     <li class="menu-link" style="margin:0px">
-        <a href="index.php?page=contacts"><img src="{{ STATIC_URL }}img/menu/contacts.png" width="73" height="74" alt="Contacts" />Contacts</a>
+        <a href="{% url contacts %}"><img src="{{ STATIC_URL }}img/menu/contacts.png" width="73" height="74" alt="Contacts" />Contacts</a>
     </li>
 </ul>
 {% endblock %}
 
 {% block content %}
 <div class="pages">
-	<div class="page" id="{% block page_id %}{% endblock %}">
-		{% block page_logo %}{% endblock %}
-		<div class="content">
-			<div class="content-bg">
-			{% block page_content %}
-			{% endblock %}			
-			</div>
-		</div>
-		<div class="bottom-content">
-		{% include "bottom_mods.html" %}
-		{% include "footer.html" %}
-		</div>
-	</div>
+	{% include "about.html" %}
+	{% include "resume.html" %}
 </div>
-<div id="jBox"></div>
+<div id="jBox" class=""></div>
 {% endblock %}
 
 {% block footer %}
@@ -59,7 +48,7 @@ var jumpBox = {
 	collapseTime : 1200,	//Time in ms to collapse page
 	expandTime : 1200,	//Time in ms to expand page
 	slideTime : 2200,	//Time in ms of slide animation between two pages
-	firstPage : 0,	//Index number of first page
+	firstPage : {{ first_page }},	//Index number of first page
 	twitterUsername : "kakarukeys",
 	numberOfTweets : 1,	//Number of Recent Tweets
 	showTwUname : true,	//Show link with username before every tweet

@@ -1,19 +1,15 @@
 from django.conf.urls import patterns, include, url
-from django.views.generic import TemplateView
-
-
-#import apps.coming_soon.views as coming_soon
+from apps.jumpbox.views import Jumpbox
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    url(r'^$', TemplateView.as_view(template_name = "about.html"), name='about'),
-    url(r'^resume/$', TemplateView.as_view(template_name = "resume.html"), name='resume'),
-    # url(r'^testing/', include('testing.foo.urls')),
-    # url(r'^gerd/$', coming_soon.ComingSoon.as_view(), name="coming_soon"),
+	url(r'^$', Jumpbox.as_view(first_page = 0), name='about'),
+    url(r'^resume/$', Jumpbox.as_view(first_page = 1), name='resume'),
+	url(r'^portfolio/$', Jumpbox.as_view(first_page = 2), name='portfolio'),
+	url(r'^contacts/$', Jumpbox.as_view(first_page = 3), name='contacts'),
     
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

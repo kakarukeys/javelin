@@ -1,0 +1,13 @@
+<div class="page" id="{% block page_id %}{% endblock %}">
+{% block page_logo %}{% endblock %}
+	<div class="content">
+		<div class="content-bg">
+		{% block page_content %}
+		{% endblock %}			
+		</div>
+	</div>
+	<div class="bottom-content">
+	{% include "bottom_mods.html" %}
+	{% include "footer.html" %}
+	</div>
+</div>
