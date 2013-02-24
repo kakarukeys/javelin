@@ -268,7 +268,7 @@ function expandContent(pageIndex) {
 }
 (function($) {
 	$.fn.rotateRel = function(angle,duration) {
-		var isRotated = this.attr("class").indexOf("rotate(")>=0;
+		var isRotated = (this.attr("class") || '').indexOf("rotate(")>=0;
 		var rotatedAngle
 		if (isRotated) {
 			rotatedAngle = this.attr("class").split("rotate(")[1].split(")")[0]*1;

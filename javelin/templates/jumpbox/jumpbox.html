@@ -27,8 +27,22 @@
 <div class="pages">
 	{% include "jumpbox/about.html" %}
 	{% include "jumpbox/resume.html" %}
+	{% include "jumpbox/portfolio.html" %}
 </div>
-<div id="jBox" class=""></div>
+<div class="folioDescr">
+  <div class="folioDescrContent"></div>
+  <div class="descr-arrow"></div>
+</div>
+<div class="dark-layer"></div>
+<div id="popupBox"></div>
+<div id="popup"> 
+	<a href="index.php" onclick="closePopup()" class="close"> 
+  		<img height="32" width="32" alt="close" src="{{ STATIC_URL }}img/close.png" class="p-close" />
+  	</a>
+	<div class="pop-window">
+    </div>
+</div>
+<div id="jBox"></div>
 {% endblock %}
 
 {% block footer %}

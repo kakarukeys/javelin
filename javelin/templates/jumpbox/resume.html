@@ -65,7 +65,6 @@
     <p>wxPython / NLP / gevent / Facebook API / Twitter API / Twitter Bootstrap / Selenium / fabric / numPy / Heroku / Solr /......</p>
     <p>The novice skillset consists of skills that a developer picks up along the way, plays with, touches the surface of it and thus will not be afraid to try again next time.</p>
 </div>
-<div class="clear"></div>
 <h3 class="inner-heading">Work Experience (3 years)</h3>
 <div class="resume-item">
     <h3 class="small-heading">Software Engineer</h3>
@@ -91,18 +90,18 @@
     <p>CAP: 4.5 / 5</p>
 </div>
 <p style="text-align:center">
-	<a class="button" id="print_resume" href="#">Print Resume</a>
-	<a class="button" href="{{ STATIC_URL }}CV%20Resume.doc">Download Resume</a>
+    <a class="button" id="print_resume" href="#">Print Resume</a>
+    <a class="button" href="{{ STATIC_URL }}CV%20Resume.doc">Download Resume</a>
 </p>
 {% endblock %}
 
 {% block javascript %}
-	{{ block.super }}
-	
+    {{ block.super }}
+    
 <script type="text/javascript">
 $("a#print_resume").click(function() {
-	window.print();
-	return false;
+    window.print();
+    return false;
 });
 </script>
 {% endblock %}

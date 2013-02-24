@@ -9,3 +9,8 @@ class Jumpbox(TemplateView):
         context["first_page"] = self.first_page
         return context
         
+class PortfolioItem(TemplateView):
+    def get_template_names(self):
+        """ template name depends on URL parameter item_name """
+        return ["jumpbox/folio/{0}.html".format(self.kwargs["item_name"])]
+        
