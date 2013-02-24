@@ -178,10 +178,17 @@ jQuery(document).ready(function(){
 	},
 	function(){
 		$(this).rotateRel(-7,200)
-	})
-})
+	});
+    $("#print_resume").click(function() {
+        window.print();
+        return false;
+    });
+});
+
 function slideTo(slideIndex) {
 	if($(".menu-link.active").index()==slideIndex) return;
+    
+    $(".folioDescr").hide();
 
 	if($('html').css('scrollTop')===null && $(window).scrollTop()>200) {
 		$('body').animate({scrollTop:0}, $(window).scrollTop(),function(){switchPage()});
