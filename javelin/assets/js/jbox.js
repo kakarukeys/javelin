@@ -183,6 +183,12 @@ jQuery(document).ready(function(){
         window.print();
         return false;
     });
+    $("input[name='email']")
+        .focusout({typing: false}, validateEmail)
+        .keyup({typing: true}, validateEmail);
+    $("textarea[name='message']")
+        .focusout({typing: false}, validateMessage)
+        .keyup({typing: true}, validateMessage);
 });
 
 function slideTo(slideIndex) {
@@ -379,18 +385,24 @@ function showLoader(){
 function hideLoader(){
 	$(".ajax-loader").hide()	
 }
-function validateEmail() {
+function validateEmail(event) {
 	var emailInput = $("#contact_email")
 	var email = emailInput.attr("value");
 	var re = /^\w+([\.-]?\w+)*@(((([a-z0-9]{2,})|([a-z0-9][-][a-z0-9]+))[\.][a-z0-9])|([a-z0-9]+[-]?))+[a-z0-9]+\.([a-z]{2}|(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum|mobi|travel))$/i;
-	if(re.test(email)) emailInput.removeClass("required");
- 	else emailInput.addClass("required");
+	if(re.test(email)) {
+        emailInput.removeClass("required");
+    } else if (!event || !event.data.typing) {
+        emailInput.addClass("required");
+    }
 }
-function validateMessage() {
+function validateMessage(event) {
 	message = $("textarea#contact_message").val();
 	m_length = ($.trim(message)).length;
-	if (m_length < 10) $("textarea#contact_message").addClass("required");
-	else $("textarea#contact_message").removeClass("required");
+	if (m_length >= 10) {
+        $("textarea#contact_message").removeClass("required");
+    } else if (!event || !event.data.typing) {
+        $("textarea#contact_message").addClass("required");
+    }
 }
 function sendMessage() {
 	validateEmail();
