@@ -10,7 +10,8 @@
 {% block page_content %}
 <h2 class="content-heading">Contacts</h2>
 <div class="status_message"></div>
-<form style="float:left;margin-right:40px;" action="#" method="post" id="contact_form">
+<form style="float:left;margin-right:40px;" action="{% url send_message %}" method="post" id="contact_form">
+    {% csrf_token %}
     <p>
         <label>Your Name:<br />
             <input type="text" size="40" name="name" id="contact_name" />

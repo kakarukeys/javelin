@@ -1,0 +1,11 @@
+{% if success %}
+<div class="mail-sent">
+<p align="center"><img hspace="10" src="{{ STATIC_URL }}img/mail-sent.png" alt="Ok" /></p>
+<h3 class="small-heading">Thanks!<br/>Your message has been successfully sent!</h3>
+</div>
+{% else %}
+<div class="mail-error">
+<p align="center"><img hspace="10" align="absmiddle" src="{{ STATIC_URL }}img/mail-error.png" alt="Error" /></p>
+<h3 class="small-heading">Error Occured.<br/>Try again later.</h3>
+</div>
+{% endif %}

@@ -408,16 +408,18 @@ function sendMessage() {
 	validateEmail();
 	validateMessage();
 	if (!$("#contact_email,#contact_message").hasClass("required")) {
+        var form = $("#contact_form");
 		var name = $("#contact_name").attr("value");
 		var email = $("#contact_email").attr("value");
 		var subject = $("#contact_subject").attr("value");
 		var message= $("#contact_message").val().replace(/<\/?[^>]+>/gi, '');
+        var csrf = form.find("input[name='csrfmiddlewaretoken']").val();
 		$(".contact-form").fadeOut(600,function(){
 			$(".contact-status").html('<img class="ajax-loader" src="'+ajaxLoader.src+'" width="'+ajaxLoader.width+'" height="'+ajaxLoader.height+'" />').show()
 		})
-		jQuery.post("scripts/send_message.php",{name : name, email : email, subject : subject, message : message},
+		jQuery.post(form.attr("action"), {name : name, email : email, subject : subject, message : message, csrfmiddlewaretoken: csrf},
 			function (status) {
-				$("#contact_form").fadeTo(300,0,function(){
+				form.fadeTo(300,0,function(){
 					$(this).css({"visibility":"hidden"});
 					$(".status_message").html(status).fadeIn(300)
 				});

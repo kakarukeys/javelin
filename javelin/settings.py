@@ -143,6 +143,12 @@ LOGGING = {
     }
 }
 
+EMAIL_USE_TLS = False
+EMAIL_HOST = 'localhost'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 25
+
 # import local settings overriding the defaults
 try:
     from settings_local import *
