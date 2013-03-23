@@ -200,13 +200,11 @@ function slideTo(slideIndex) {
     sliding = true;
     $(".folioDescr").hide();
 
-	if($('html').css('scrollTop')===null && $(window).scrollTop()>200) {
-		$('body').animate({scrollTop:0}, $(window).scrollTop(),function(){switchPage()});
+	if ($(window).scrollTop()> 200) {
+        $(window.chrome ? "body" : "html").animate({scrollTop: 0}, "slow", switchPage);
+	} else { 
+        switchPage();
 	}
-	else if ($(window).scrollTop()>200) {
-		$('html').animate({scrollTop:0}, $(window).scrollTop(),function(){switchPage()});
-	}
-	else switchPage();
 	
 	function switchPage(){
 	closePopup();
