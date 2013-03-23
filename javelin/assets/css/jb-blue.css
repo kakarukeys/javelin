@@ -197,17 +197,17 @@ span.period {
 #about { background:url(../img/layouts-blue/about-bg.jpg) no-repeat top; }
 .about-logo {
 	background:url(../img/layouts-blue/logo-about.png) no-repeat;
-	width:700px;
+	width:730px;
 	height:180px;
 	position:absolute;
 	top:20px;
 	left:50%;
 	margin-left:-400px;
 }
-/*------ Resume --------*/
-#resume { background:url(../img/layouts-blue/about-bg.jpg) no-repeat top; }
-.resume-logo {
-	background:url(../img/layouts-blue/logo-resume.png) no-repeat;
+/*------ Members --------*/
+#members { background:url(../img/layouts-blue/about-bg.jpg) no-repeat top; }
+.members-logo {
+	background:url(../img/layouts-blue/logo-members.png) no-repeat;
 	width:600px;
 	height:180px;
 	position:absolute;

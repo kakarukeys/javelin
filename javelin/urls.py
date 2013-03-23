@@ -8,7 +8,7 @@ from apps.jumpbox.views import Jumpbox, PortfolioItem, SendMessage
 
 urlpatterns = patterns('',
 	url(r'^$', Jumpbox.as_view(first_page = 0), name='about'),
-    url(r'^resume/$', Jumpbox.as_view(first_page = 1), name='resume'),
+    url(r'^members/$', Jumpbox.as_view(first_page = 1), name='members'),
 	url(r'^portfolio/$', Jumpbox.as_view(first_page = 2), name='portfolio'),
 	url(r'^contacts/$', Jumpbox.as_view(first_page = 3), name='contacts'),
     

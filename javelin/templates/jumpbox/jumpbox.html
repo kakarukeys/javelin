@@ -9,10 +9,10 @@
 <div class="ajax-loader"></div>
 <ul id="menu">
 	<li class="menu-link">
-        <a href="{% url about %}"><img src="{{ STATIC_URL }}img/menu/about.png" width="72" height="72" alt="About" />About Me</a>
+        <a href="{% url about %}"><img src="{{ STATIC_URL }}img/menu/about.png" width="72" height="72" alt="About" />About Us</a>
     </li>
     <li class="menu-link">
-        <a href="{% url resume %}"><img src="{{ STATIC_URL }}img/menu/resume.png" width="80" height="81" alt="Resume" />Resume</a>
+        <a href="{% url members %}"><img src="{{ STATIC_URL }}img/menu/members.png" width="80" height="81" alt="Members" />Members</a>
     </li>
     <li class="menu-link">
        <a href="{% url portfolio %}"><img src="{{ STATIC_URL }}img/menu/portfolio.png" width="84" height="84" alt="Portfolio" />Portfolio</a>
@@ -26,7 +26,7 @@
 {% block content %}
 <div class="pages">
 	{% include "jumpbox/about.html" %}
-	{% include "jumpbox/resume.html" %}
+	{% include "jumpbox/members.html" %}
 	{% include "jumpbox/portfolio.html" %}
     {% include "jumpbox/contacts.html" %}
 </div>
