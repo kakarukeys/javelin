@@ -1,6 +1,7 @@
 // JavaScript Document
 var isIE6;
 jumpBox = {};
+var sliding = false;
 jQuery(document).ready(function(){
 	Cufon.replace(jumpBox.cufonReplace)
 	/*----   Startup Positioning of Content Pages    ----*/
@@ -122,8 +123,8 @@ jQuery(document).ready(function(){
 	})
 	$(".menu-link a").click(function(e){
 		e.preventDefault()
-		if(!$(this).parent(".menu-link").hasClass("active")) {
-				slideTo($(this).parent(".menu-link").index())
+		if(!$(this).parent(".menu-link").hasClass("active") && !sliding) {
+            slideTo($(this).parent(".menu-link").index())
 		}
 	})
 	/*----------Contact Form ----------*/
@@ -139,28 +140,30 @@ jQuery(document).ready(function(){
 	/*----------Portfolio----------*/
 	$(".folio-item a").hover(
 	function(){
-		var folioItem = $(this);
-		$(".folioDescrContent").html(folioItem.next(".item-description").html())
-		if(folioItem.parents(".folio-item").hasClass("first")) {
-			$(".folioDescr").css({
-				left:folioItem.offset().left+folioItem.width()+20,
-				top:folioItem.offset().top-10		
-			}).fadeIn(200)
-			$(".descr-arrow").css({
-				left:-10,
-				"background-position":"left bottom"		
-			})
-		}
-		else{
-			$(".folioDescr").css({
-				left:folioItem.offset().left-$(".folioDescr").width()-60,
-				top:folioItem.offset().top-10		
-			}).fadeIn(200)
-			$(".descr-arrow").css({
-				left:"100%",
-				"background-position":"left top"		
-			})
-		}
+        if (!sliding) {
+            var folioItem = $(this);
+            $(".folioDescrContent").html(folioItem.next(".item-description").html())
+            if(folioItem.parents(".folio-item").hasClass("first")) {
+                $(".folioDescr").css({
+                    left:folioItem.offset().left+folioItem.width()+20,
+                    top:folioItem.offset().top-10		
+                }).fadeIn(200)
+                $(".descr-arrow").css({
+                    left:-10,
+                    "background-position":"left bottom"		
+                })
+            }
+            else{
+                $(".folioDescr").css({
+                    left:folioItem.offset().left-$(".folioDescr").width()-60,
+                    top:folioItem.offset().top-10		
+                }).fadeIn(200)
+                $(".descr-arrow").css({
+                    left:"100%",
+                    "background-position":"left top"		
+                })
+            }
+        }
 	},
 	function(){
 		$(".folioDescr").hide()
@@ -194,6 +197,7 @@ jQuery(document).ready(function(){
 function slideTo(slideIndex) {
 	if($(".menu-link.active").index()==slideIndex) return;
     
+    sliding = true;
     $(".folioDescr").hide();
 
 	if($('html').css('scrollTop')===null && $(window).scrollTop()>200) {
@@ -242,7 +246,7 @@ function slideTo(slideIndex) {
 		expandContent(slideIndex);
 		$(".pages").css({height:jumpBox.pagesHeight[slideIndex]})
 	},jumpBox.collapseTime+speed+600)
-	$(".page.active .bottom-content").delay(speed+jumpBox.collapseTime+700).animate({top:"0px"},jumpBox.expandTime/2)
+	$(".page.active .bottom-content").delay(speed+jumpBox.collapseTime+700).animate({top:"0px"},jumpBox.expandTime/2, function() { sliding = false; });
 	}
 }
 function activatePage(linkIndex){

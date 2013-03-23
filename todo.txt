@@ -1,0 +1,2 @@
+automated testing for integrity of the website
+check view on Chrome and IE - chrome link click is faulty
