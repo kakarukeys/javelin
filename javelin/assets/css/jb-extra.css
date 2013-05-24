@@ -1,0 +1,5 @@
+.ridge {
+    border: 1px dashed gray;
+    padding: 5px;
+    border-radius:5px;
+}
