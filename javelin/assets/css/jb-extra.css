@@ -3,3 +3,7 @@
     padding: 5px;
     border-radius:5px;
 }
+
+img.small_logo {
+    width: 20%;
+}
