@@ -1,2 +1,3 @@
 automated testing for integrity of the website
 d:\virtualenvs\javelin\lib\site-packages\django\template\defaulttags.py:1235: DeprecationWarning: The syntax for the url template tag is changing. Load the `url` tag from the `future` tag library to start using the new behavior.
+during first ever load, the footer may become hidden because of messed-up css positioning
