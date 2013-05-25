@@ -204,10 +204,10 @@ span.period {
 	left:50%;
 	margin-left:-400px;
 }
-/*------ Members --------*/
-#members { background:url(../img/layouts-blue/about-bg.jpg) no-repeat top; }
-.members-logo {
-	background:url(../img/layouts-blue/logo-members.png) no-repeat;
+/*------ Profiles --------*/
+#profiles { background:url(../img/layouts-blue/about-bg.jpg) no-repeat top; }
+.profiles-logo {
+	background:url(../img/layouts-blue/logo-profiles.png) no-repeat;
 	width:600px;
 	height:180px;
 	position:absolute;

@@ -13,7 +13,7 @@
         <a href="{% url about %}"><img src="{{ STATIC_URL }}img/menu/about.png" width="72" height="72" alt="About" />About Us</a>
     </li>
     <li class="menu-link">
-        <a href="{% url members %}"><img src="{{ STATIC_URL }}img/menu/members.png" width="80" height="81" alt="Profiles" />Profiles</a>
+        <a href="{% url profiles %}"><img src="{{ STATIC_URL }}img/menu/profiles.png" width="80" height="81" alt="Profiles" />Profiles</a>
     </li>
     <li class="menu-link">
        <a href="{% url portfolio %}"><img src="{{ STATIC_URL }}img/menu/portfolio.png" width="84" height="84" alt="Portfolio" />Portfolio</a>
@@ -27,7 +27,7 @@
 {% block content %}
 <div class="pages">
 	{% include "jumpbox/about.html" %}
-	{% include "jumpbox/members.html" %}
+	{% include "jumpbox/profiles.html" %}
 	{% include "jumpbox/portfolio.html" %}
     {% include "jumpbox/contacts.html" %}
 </div>
