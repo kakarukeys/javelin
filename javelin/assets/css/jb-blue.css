@@ -197,23 +197,23 @@ span.period {
 #about { background:url(../img/layouts-blue/about-bg.jpg) no-repeat top; }
 .about-logo {
 	background:url(../img/layouts-blue/logo-about.png) no-repeat;
-	width:730px;
-	height:180px;
+	width:700px;
+	height:161px;
 	position:absolute;
 	top:20px;
 	left:50%;
-	margin-left:-400px;
+	margin-left:-355px;
 }
 /*------ Profiles --------*/
 #profiles { background:url(../img/layouts-blue/about-bg.jpg) no-repeat top; }
 .profiles-logo {
 	background:url(../img/layouts-blue/logo-profiles.png) no-repeat;
-	width:600px;
-	height:180px;
+	width:581px;
+	height:161px;
 	position:absolute;
 	top:35px;
 	left:50%;
-	margin-left:-390px;
+	margin-left:-380px;
 }
 ul.details {
 	list-style:none;
