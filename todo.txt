@@ -1,2 +1,6 @@
+{"errors": [{"message": "The Twitter REST API v1 is no longer active. Please migrate to API v1.1. https://dev.twitter.com/docs/api/1.1/overview.", "code": 68}]}
+find a way to debug production website
 automated testing for integrity of the website
+cleverly manage dependencies during deployment
 d:\virtualenvs\javelin\lib\site-packages\django\template\defaulttags.py:1235: DeprecationWarning: The syntax for the url template tag is changing. Load the `url` tag from the `future` tag library to start using the new behavior.
+secure production website
