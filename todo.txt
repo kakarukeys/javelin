@@ -1,3 +1,6 @@
+Publish rate per hour per developer for different number of developers.
+able to click on each specialty to show details
+elaborate on application development specialty: clojure, angular.js
 {"errors": [{"message": "The Twitter REST API v1 is no longer active. Please migrate to API v1.1. https://dev.twitter.com/docs/api/1.1/overview.", "code": 68}]}
 find a way to debug production website
 automated testing for integrity of the website

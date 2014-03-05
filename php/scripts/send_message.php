@@ -4,7 +4,7 @@ if (isset($_POST['email'])) $email = $_POST['email'];
 if (isset($_POST['subject'])) $subject = $_POST['subject'];	
 if (isset($_POST['message'])) $message = $_POST['message'];
 
-$mail_from = "hello@jiangfung.com";
+$mail_from = "hello@javelin-consulting.com";
 $mail_to = "kakarukeys@gmail.com";//Change this email to yours
 
 $message = stripslashes($message);
