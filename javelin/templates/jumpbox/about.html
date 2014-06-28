@@ -9,21 +9,29 @@
 
 {% block page_content %}
 <h2 class="content-heading">About Us</h2>
-<div style="height:969px">
-    <p>We are a development team capable of delivering elegant and functional software solutions to real-world problems.</p>
+<div style="height:1400px">
+    <p>I am Jeff. I run a development team capable of delivering elegant and functional software solutions to real-world problems.</p>
+    
+    <p>If you are looking for <strong>experienced and reliable</strong> developers with a balanced skill mix of good design, software engineering, customer communication and project management, you have come to the right place.  With a balanced skillset, we are capable of understanding your disruptive idea and executing it into a working prototype.</p>
     
     <img src="{{ STATIC_URL }}img/developer.png">
     
-    <p>If you are looking for <strong>reliable developers</strong>  with a balanced skill mix of creativity, clear organized thinking, UI/UX and software engineering, you have come to the right place.  With the right skillset, we are able to execute your disruptive idea into a working prototype.</p>
+    <h3 class="small-heading">Our services</h3>
+    <ol>
+        <li><span class="elegant">Rapid</span> application protyping for your new business idea.</li>
+        <li>Agile application development for your organization.</li>
+        <li>Data analysis, data science work with your data, to provide you business insights.</li>
+        <li>Professional code review & Q.A. for your project.</li>
+    </ol>
     
     <h3 class="small-heading">Our specialties</h3>
     <div class="container">
         <div class="row">
             <div class="span3 ridge">
-                <img src="{{ STATIC_URL }}img/rad.png"><span class="elegant">Rapid</span> <strong>application development for your business.</strong>
+                <img src="{{ STATIC_URL }}img/rad.png"><strong>Web development in Python and Javascript frameworks.</strong>
             </div>
             <div class="span2 ridge">
-                <img src="{{ STATIC_URL }}img/nlp.png"><strong>Natural language processing and text mining.</strong>
+                <img src="{{ STATIC_URL }}img/nlp.png"><strong>Web scraping, data mining and NLP.</strong>
             </div>
             <div class="span2 ridge">
                 <img src="{{ STATIC_URL }}img/jsviz.png"><strong>Interactive Javascript data visualization.</strong>
@@ -31,16 +39,25 @@
         </div>
         <div class="row">
             <div class="span7">
-                <blockquote class="row stylish">With agile development, we turn insights into high-impact applications .</blockquote>
+                <blockquote class="row stylish">By an agile process, we turn insights into high-impact applications.</blockquote>
             </div>
         </div>
     </div>
+    
+    <h3 class="small-heading">Our rate</h3>
+    <p>After we receive the requirements of your project, we will perform a detailed breakdown and estimate the total effort needed. The hourly rate we quote depends on a number of factors.</p>
+    <ul>
+        <li>The pace: how much effort you require in a weekly iteration.</li>
+        <li>The manpower: number of developers to work on your project.</li>
+        <li>The scope: total days contracted. We provide a discount if you contract more.</li>
+    </ul>
+    <p>We practice evidence-based scheduling so that both you and we have full view and control over the running cost and the progress of the project.</p>
     
     <h3 class="small-heading">Our clients</h3>
     <img class="small_logo" src="{{ STATIC_URL }}img/NUS_logo.png">
     <img class="small_logo" src="{{ STATIC_URL }}img/jamiq_logo.png">
     <img class="small_logo" src="{{ STATIC_URL }}img/KKH_logo.png">
     <h3 class="small-heading">Enjoy your time here</h3>
-    <p>We are currently avaiable for projects. You may view our team member profiles and portfolio. If you are still interested, you can <a class="slide to(contacts)" href="{% url contacts %}">contact us</a> or connect with us.</p>
+    <p>We are currently available for projects. You may view our team member profiles and portfolio. If you are still interested, you can <a class="slide to(contacts)" href="{% url contacts %}">contact us</a> or connect with us.</p>
 </div>
 {% endblock %}

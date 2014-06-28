@@ -1,9 +1,18 @@
-Publish rate per hour per developer for different number of developers.
-able to click on each specialty to show details
-elaborate on application development specialty: clojure, angular.js
-{"errors": [{"message": "The Twitter REST API v1 is no longer active. Please migrate to API v1.1. https://dev.twitter.com/docs/api/1.1/overview.", "code": 68}]}
-find a way to debug production website
-automated testing for integrity of the website
-cleverly manage dependencies during deployment
-d:\virtualenvs\javelin\lib\site-packages\django\template\defaulttags.py:1235: DeprecationWarning: The syntax for the url template tag is changing. Load the `url` tag from the `future` tag library to start using the new behavior.
-secure production website
+adjust content in view of the present situation
+elaborate on application development preferences: clojure, angular.js
+
+issue: {"errors": [{"message": "The Twitter REST API v1 is no longer active. Please migrate to API v1.1. https://dev.twitter.com/docs/api/1.1/overview.", "code": 68}]}    
+
+Issue: d:\virtualenvs\javelin\lib\site-packages\django\template\defaulttags.py:1235: DeprecationWarning: The syntax for the url template tag is changing. Load the `url` tag from the `future` tag library to start using the new behavior.
+
+As a developer I want to find a way to debug production website, so that I can pinpoint future problems.
+
+As a developer I want the integrity of the website to be automatically tested, so that I can know which component goes wrong quickly.
+
+As a developer I want to have a clever way to manage dependencies during build and deployment so that it is tidier.
+
+As a visitor I want to click on a "read more" button in each specialty box so that I can read details of each speciality.
+
+As a product owner I want my production website secured so that it will not be hacked and cause loss of business.
+
+As a visitor I want to have a live chat with Javelin consultants so that I can get answers to my questions fast.
