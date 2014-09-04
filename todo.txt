@@ -15,3 +15,9 @@ As a visitor I want to click on a "read more" button in each specialty box so th
 As a product owner I want my production website secured so that it will not be hacked and cause loss of business.
 
 As a visitor I want to have a live chat with Javelin consultants so that I can get answers to my questions fast.
+
+Rewrite deployment script to a more modern form
+Upgrade Django
+Upgrade boilerplate
+
+separate static file urls from urls handled by django url routing
