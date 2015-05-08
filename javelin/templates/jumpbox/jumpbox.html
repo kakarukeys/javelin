@@ -59,6 +59,8 @@
 {% endblock %}
 
 {% block javascript %}
+    {{ block.super }}
+    
 <script type="text/javascript">
 var jumpBox = {
 	collapseTime : 1200,	//Time in ms to collapse page
